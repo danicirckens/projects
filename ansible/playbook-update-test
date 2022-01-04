@@ -1,0 +1,9 @@
+- hosts: ubuntu1:ubuntu2
+  tasks:
+    - name: run updates
+      apt: name=* state=latest
+
+- hosts: centos
+  tasks:
+          - name: run updates
+            yum: name=* state=latest
